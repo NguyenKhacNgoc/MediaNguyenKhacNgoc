@@ -1,56 +1,26 @@
 package com.khacngoc.zingmp3;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+public class song {
+    private String title;
+    private int file;
+    public song(String title, int file) {
+        this.title = title;
+        this.file = file;
+    }
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class song extends AppCompatActivity {
-    private String Title;
-    private int File;
-    Button bai1;
-    Button bai2;
-    Button bai3;
-    Button bai4;
-    Button bai5;
-    Button bai6;
+    public String getTitle() {
+        return title;
+    }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public int getFile() {
-        return File;
+        return file;
     }
 
     public void setFile(int file) {
-        File = file;
+        this.file = file;
     }
-
-    public song(String title, int file) {
-        Title = title;
-        File = file;
-
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_2);
-        bai1 = (Button) findViewById(R.id.bai1);
-        bai2 = (Button) findViewById(R.id.bai2);
-        bai3 = (Button) findViewById(R.id.bai3);
-        bai4 = (Button) findViewById(R.id.bai4);
-        bai5 = (Button) findViewById(R.id.bai5);
-        bai6 = (Button) findViewById(R.id.bai6);
-        bai1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b1 = new Intent(song.this, MainActivity.class);
-                startActivity(b1);
-            }
-        });
-    }
-
 }
