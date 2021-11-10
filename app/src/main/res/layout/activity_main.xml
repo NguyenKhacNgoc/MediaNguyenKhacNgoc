@@ -1,63 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnChon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:text="Chọn bài" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:text="Pause" />
+
     <TextView
-        android:id="@+id/nghenhac"
+        android:id="@+id/tvNgheNhac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nghe nhac"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113" />
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="Nghe nhạc"
+        android:textSize="50dp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/chonbai"
+    <TextView
+        android:id="@+id/tvBaiSo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Chon bai"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        android:layout_below="@+id/tvNgheNhac"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:text="Bài 1"
+        android:textSize="30dp" />
 
-    <Button
-        android:id="@+id/pause"
+    <TextView
+        android:id="@+id/tvTenBai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Pause"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        android:layout_below="@+id/tvBaiSo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:text="Tên bài hát"
+        android:textSize="40dp" />
 
-    <Button
-        android:id="@+id/play"
+    <TextView
+        android:id="@+id/tvThoiGian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Play"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        android:layout_above="@+id/btnPause"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:text="00:00"
+        android:textSize="50dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
